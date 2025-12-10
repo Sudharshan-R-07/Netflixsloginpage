@@ -20,8 +20,11 @@ app.post('/login',function(req,res){
        res.send(false)
     }
 
-})
 
+})
+app.get("/", (req, res) => {
+  res.send("Backend is working ✅");
+});
 app.listen(5000,function(){
     console.log("Sever Started........")
 
